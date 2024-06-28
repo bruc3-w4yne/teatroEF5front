@@ -17,16 +17,16 @@ export class LoginClienteComponent {
     private router: Router
   ){}
 
-  ingresar() {
+  login() {
     this.clienteService.login(this.username, this.clave).subscribe(
-    response => {
-    console.log('Login exitoso:', response);
-    this.router.navigate(['/']);
-    },
-    error => {
-    console.error('Error en el login:', error);
-    this.error = 'Correo electrónico o contraseña incorrectos.';
+      response => {
+        console.log('Login exitoso:', response);
+        this.router.navigate(['/main']);
+      },
+      error => {
+        console.error('Error en el login:', error);
+        this.error = 'Correo electrónico o contraseña incorrectos.';
     }
-    );
+  );
   }
 }

@@ -8,6 +8,7 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,8 +16,9 @@ import { FormsModule } from '@angular/forms';
     LoginClienteComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    AppRoutingModule, HttpClientModule, FormsModule
+    AppRoutingModule, HttpClientModule,
   ],
   providers: [
     provideClientHydration()
