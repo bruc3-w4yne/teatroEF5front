@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class ClienteService {
   private baseUrl = 'http://localhost:8080/api/clientes';
   constructor(private http: HttpClient) { }
+
   login(username: string, clave: string) {
     return this.http.post<any>(`${this.baseUrl}/login?username=${username}&clave=${clave}`, {});
   }

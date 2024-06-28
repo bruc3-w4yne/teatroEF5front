@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { LoginClienteComponent } from './login-cliente/login-cliente.component';
-import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginaPrincipalComponent,
-    LoginClienteComponent,
-    RegistrarClienteComponent
+    LoginClienteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, HttpClientModule, FormsModule
   ],
   providers: [
     provideClientHydration()
