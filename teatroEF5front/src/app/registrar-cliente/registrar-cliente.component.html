@@ -1,1 +1,42 @@
-<p>registrar-cliente works!</p>
+<div class="container">
+
+  <h1>Registrar Usuarios</h1>
+
+  <form class="row g-3" (ngSubmit)="registrarCliente()">
+      <div class="col-md-6">
+          <label for="nomcli" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nomcli" name="nomcli"
+          [(ngModel)]="nuevoCliente.nomcli" placeholder="Ingrese nombre">
+      </div>
+
+      <div class="col-md-6">
+          <label for="apecli" class="form-label">Apellido</label>
+          <input type="text" name="apecli" class="form-control" id="apecli"
+          [(ngModel)]="nuevoCliente.apecli" placeholder="Ingrese Apellido">
+      </div>
+
+      <div class="col-6">
+          <label for="username" class="form-label">Correo</label>
+          <input type="email" name="username" class="form-control" id="username"
+          [(ngModel)]="nuevoCliente.username" placeholder="Ingrese correo">
+      </div>
+
+      <div class="col-6">
+          <label for="clave" class="form-label">Clave</label>
+          <input type="password" class="form-control" name="clave" id="clave"
+          [(ngModel)]="nuevoCliente.clave" placeholder="Ingrese password">
+      </div>
+
+      <div class="col-md-6">
+          <label for="dni" class="form-label">Fecha de nacimiento</label>
+          <input type="date" class="form-control" name="dni" id="dni"
+          [(ngModel)]="nuevoCliente.dni" placeholder="año/mes/dia">
+      </div>
+      <div *ngIf="error" class="error-message alert alert-danger">{{ error }}</div>
+      <div class="col-12">
+          <button type="submit" class="btn btn-primary">Registrar</button>
+      </div>
+  </form>
+
+</div>
+
