@@ -7,13 +7,15 @@ import { LoginClienteComponent } from './login-cliente/login-cliente.component';
 import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FuncionMantenimientoComponent } from './funcion-mantenimiento/funcion-mantenimiento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginaPrincipalComponent,
     LoginClienteComponent,
-    RegistrarClienteComponent // Asegúrate de declarar tu componente aquí
+    RegistrarClienteComponent,
+    FuncionMantenimientoComponent // Asegúrate de declarar tu componente aquí
   ],
   imports: [
     BrowserModule,
