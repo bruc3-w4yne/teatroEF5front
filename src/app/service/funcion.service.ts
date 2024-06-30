@@ -22,6 +22,6 @@ export class FuncionService {
     return this.http.post<Funcion>(this.urlBase + '/agregarFuncion', funcion);
   }
   public eliminar(id : number) : Observable<any>{
-    return this.http.delete<any>(this.urlBase + '/eliminar' + id);
+    return this.http.delete<any>(this.urlBase + '/eliminar/' + id);
   }
 }

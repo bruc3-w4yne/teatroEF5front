@@ -1,1 +1,70 @@
-<p>funcion-mantenimiento works!</p>
+<app-pagina-principal></app-pagina-principal>
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-sm-4">
+            <h1>Mantenimiento Funciones</h1>
+            <div *ngIf="mensaje" class="alert alert-success" role="alert">
+                {{ mensaje }}
+            </div>
+            <form (ngSubmit)="registrarFuncion()">
+                <div class="form-group my-2">
+                    <label for="idfuncion">Código</label>
+                    <input type="text" class="form-control" id="idfuncion" name="idfuncion"
+                        [(ngModel)]="nuevaFuncion.idfuncion" placeholder="Código" readonly>
+                </div>
+                <div class="form-group my-2">
+                    <label for="idevento">Evento</label>
+                    <select id="idevento" name="idevento" class="form-control"
+                        [(ngModel)]="nuevaFuncion.idevento">
+                        <option selected value="0">Seleccione...</option>
+                        <option *ngFor="let objEvento of eventos" [value]="objEvento.idevento">{{ objEvento.nomevento }}
+                        </option>
+                    </select>
+
+                </div>
+                <div class="form-group col-md-12 my-2">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Fecha"
+                        [(ngModel)]="nuevaFuncion.fecha">
+                </div>
+                <div class="form-group col-md-12 my-2">
+                    <label for="horainicio">Hora Inicio</label>
+                    <input type="text" class="form-control" id="horainicio" name="horainicio" placeholder="00:00:00"
+                        [(ngModel)]="nuevaFuncion.horainicio">
+                </div>
+                <div class="form-group my-2">
+                    <label for="horafin">Hora Fin</label>
+                    <input type="text" class="form-control" id="horafin" name="horafin" placeholder="00:00:00"
+                        [(ngModel)]="nuevaFuncion.horafin">
+                </div>
+                <button type="submit" class="btn btn-primary my-3">Registrar</button>
+                <!--a (click)="(limpiarCampos())" class="btn btn-danger">Limpiar</a-->
+            </form>
+        </div>
+        <div class="col-6 col-sm-7">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Evento</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Hora Inicio</th>
+                        <th scope="col">Hora Fin</th>
+                        <th scope="col">Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let objFun of funciones">
+                        <th scope="row">{{objFun.idfuncion}}</th>
+                        <td>{{objFun.objEvento?.nomevento}}</td>
+                        <td>{{objFun.fecha}}</td>
+                        <td>{{objFun.horainicio}}</td>
+                        <td>{{objFun.horafin}}</td>
+                        <td ><a (click)="buscarFuncion(objFun.idfuncion)" class="btn btn-success">Editar</a></td>
+                    <td ><a (click)="eliminarFuncion(objFun.idfuncion)" class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
