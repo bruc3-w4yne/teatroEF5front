@@ -1,3 +1,5 @@
+import { Eventos } from "./eventos";
+
 export interface Funcion {
     idfuncion : number;
     idevento : number;
@@ -5,5 +7,5 @@ export interface Funcion {
     horainicio : string
     horafin : string;
 
-   // objEvento : Evento;
+   objEvento ? : Eventos;
 }

@@ -6,6 +6,8 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente.component';
 import { EventosMantenimientoComponent } from './eventos-mantenimiento/eventos-mantenimiento.component';
+import { FuncionMantenimientoComponent } from './funcion-mantenimiento/funcion-mantenimiento.component';
+import { InicioUserComponent } from './inicio-user/inicio-user.component';
 
 
 const routes: Routes = [
@@ -13,7 +15,10 @@ const routes: Routes = [
   { path: 'regusu', component: RegistrarClienteComponent},
   { path: 'main', component: PaginaPrincipalComponent},
   { path: 'eventos', component: EventosMantenimientoComponent},
+  { path: 'funcionMantenimiento', component: FuncionMantenimientoComponent},
+  { path: 'inicio', component: InicioUserComponent},
   { path: '**', redirectTo: '', pathMatch: 'full'}
+
 ];
 
 @NgModule({

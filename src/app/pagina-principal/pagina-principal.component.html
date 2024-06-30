@@ -1,5 +1,4 @@
 
-<div class="container">
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid font1">
       <img src="./assets/TICKET.png" style="width: 60px;height: 60px;">
@@ -10,7 +9,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link text-white" aria-current="page" routerLink="/">Inicio</a>
+            <a class="nav-link text-white" aria-current="page" routerLink="/inicio">Inicio</a>
           </li>
           <div class="collapse navbar-collapse" style="padding: 0px;" id="navbarNavDarkDropdown">
             <ul class="navbar-nav">
@@ -20,7 +19,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item font1" href="/eventos">Eventos</a></li>
-                  <li><a class="dropdown-item font1" href="#">Funciones</a></li>
+                  <li><a class="dropdown-item font1" routerLink="/funcionMantenimiento">Funciones</a></li>
                   <li><a class="dropdown-item font1" href="#">Usuarios</a></li>
                 </ul>
               </li>
@@ -30,13 +29,12 @@
             <a class="nav-link text-white" routerLink="/eventos" aria-disabled="true">Eventos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/nuevo" aria-disabled="true">Funciones</a>
+            <a class="nav-link text-white" routerLink="/funcionMantenimiento" aria-disabled="true">Funciones</a>
           </li>
-          <li class="nav-item">
+          <!--li class="nav-item">
             <a class="nav-link text-white" routerLink="/nuevo" aria-disabled="true">Login</a>
-          </li>
+          </li-->
         </ul>
       </div>
     </div>
   </nav>
-</div>

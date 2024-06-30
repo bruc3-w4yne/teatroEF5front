@@ -1,0 +1,22 @@
+<app-pagina-principal></app-pagina-principal>
+<div class="container my-3">
+    <div class="row">
+        <!-- Card 1 -->
+        <div *ngFor="let objEvento of eventos" class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{objEvento.nomevento}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{objEvento.objCategoria.nomcat}}</h6>
+                    <p class="card-text">{{objEvento.desevento}}</p>
+                    <div class="form-group">
+                        <label for="combo1">Funciones</label>
+                        <select class="form-control" id="combo1" >
+                            <option select value="0">Seleccione...</option>
+                            <option *ngFor="let objFuncion of funciones" [value]="objFuncion.idevento">{{objFuncion.fecha}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

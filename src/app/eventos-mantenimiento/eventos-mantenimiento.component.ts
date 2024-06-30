@@ -3,6 +3,7 @@ import { EventosService } from '../service/eventos.service';
 import { Eventos } from '../model/eventos';
 import { subscribe } from 'diagnostics_channel';
 import { Router } from '@angular/router';
+import { response } from 'express';
 
 
 @Component({
@@ -73,10 +74,10 @@ export class EventosMantenimientoComponent implements OnInit {
     })
   }
 
-  eliminarEvento(id: number): void {
-    this.eventosService.eliminar(id).subscribe(response => {
+  eliminarEvento(id: number) {
+    this.eventosService.eliminar(id).subscribe(Response => {
       console.log('Evento eliminado:' + Response);
-      this.listarEventos;
+      this.listarEventos();
       this.router.navigate(['eventos']);
     }, 
     error => {
