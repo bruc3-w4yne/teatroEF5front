@@ -1,0 +1,20 @@
+<div class="login-container">
+  <h2>Acceder al sistema</h2>
+  <form class="row g-3" (ngSubmit)="login()">
+    <div class="col-md-12">
+      <label class="form-label" for="username">Correo Electrónico:</label>
+      <input type="email" class="form-control" id="username" name="username"
+      [(ngModel)]="username" required>
+    </div>
+    <div class="col-md-12">
+      <label class="form-label" for="clave">Clave:</label>
+      <input type="password" class="form-control" id="clave" name="clave"
+      [(ngModel)]="clave" required>
+    </div>
+    <div *ngIf="error" class="error-message">{{ error }}</div>
+    <button type="submit" class="btn btnprimary">Ingresar</button>
+</form>
+<div class="text-center mt-3">
+  ¿No tienes una cuenta? <a routerLink="/regusu">Regístrate aquí</a>
+</div>
+</div>
