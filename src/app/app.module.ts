@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FuncionMantenimientoComponent } from './funcion-mantenimiento/funcion-mantenimiento.component';
 import { EventosMantenimientoComponent } from './eventos-mantenimiento/eventos-mantenimiento.component';
+import { InicioUserComponent } from './inicio-user/inicio-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { EventosMantenimientoComponent } from './eventos-mantenimiento/eventos-m
     LoginClienteComponent,
     RegistrarClienteComponent,
     FuncionMantenimientoComponent, // Asegúrate de declarar tu componente aquí
-    EventosMantenimientoComponent // Asegúrate de declarar tu componente aquí
+    EventosMantenimientoComponent, InicioUserComponent // Asegúrate de declarar tu componente aquí
   ],
   imports: [
     BrowserModule,
