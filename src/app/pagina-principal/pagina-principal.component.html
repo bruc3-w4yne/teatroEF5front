@@ -1,0 +1,41 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid font1">
+      <img src="./assets/TICKET.png" style="width: 60px;height: 60px;">
+      <a class="navbar-brand text-white" routerLink="/">TICKET Store</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" routerLink="/">Inicio</a>
+          </li>
+          <div class="collapse navbar-collapse" style="padding: 0px;" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn btn-dark dropdown-toggle font1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mantenimientos
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item font1" href="#">Eventos</a></li>
+                  <li><a class="dropdown-item font1" href="#">Funciones</a></li>
+                  <li><a class="dropdown-item font1" href="#">Usuarios</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/nuevo" aria-disabled="true">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/nuevo" aria-disabled="true">Funciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/nuevo" aria-disabled="true">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
